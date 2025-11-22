@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin:0;
@@ -81,7 +82,7 @@ body {
   border-radius:12px;
   box-shadow:0 4px 16px rgba(0,0,0,0.12);
 }
-/* CONTAINER */
+/* CONTAINER & SECTIONS */
 .container{
   max-width:1100px;
   margin:30px auto;
@@ -109,11 +110,24 @@ ul li{margin-bottom:6px;}
   font-size:16px;
   font-weight:600;
 }
-/* FLOATING */
-.floating{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:12px;z-index:999;}
-.fab{width:52px;height:52px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.25);} 
+/* FLOATING BUTTONS */
+.floating{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:999;
+}
+.fab{
+  width:52px;height:52px;
+  background:white;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
 .fab img{width:26px;height:26px;}
-/* DISCLAIMER */
+/* DISCLAIMER BOX */
 .disclaimer{
   background:#fff8e1;
   padding:20px;
@@ -122,33 +136,86 @@ ul li{margin-bottom:6px;}
   font-size:14px;
   line-height:1.6;
 }
+
+/* MODAL (Disclaimer Popup) */
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,0.65);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.modal{
+  background:white;
+  max-width:420px;
+  width:90%;
+  padding:22px 20px;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+.modal h3{
+  margin:0 0 10px 0;
+  font-size:18px;
+  color:#111827;
+}
+.modal p{
+  margin:0 0 10px 0;
+  font-size:14px;
+  color:#4b5563;
+}
+.modal-btn{
+  margin-top:12px;
+  width:100%;
+  padding:10px 0;
+  border:none;
+  border-radius:999px;
+  background:#1a73e8;
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+}
+.modal-btn:hover{
+  background:#155ec5;
+}
 </style>
 </head>
+
 <body>
 <div class="top-flash">⚡ 6-Month Plan ₹10,000 • Limited Offer ⚡</div>
+
 <div class="hero">
   <div class="hero-inner">
     <div>
       <div class="hero-title">Market Pulse – Nifty & BankNifty Levels</div>
-      <div class="hero-sub">Pure Price-Action Based Intraday Nifty & BankNifty Levels for Learning Purpose</div>
+      <div class="hero-sub">Pure price-action based intraday Nifty & BankNifty levels for <strong>learning purpose only</strong>.</div>
+
       <div class="hero-badges">
         <div class="hero-badge">Nifty Levels</div>
         <div class="hero-badge">BankNifty Levels</div>
         <div class="hero-badge">Price Action Zones</div>
+        <div class="hero-badge">Algo Education</div>
       </div>
+
       <a href="https://t.me/+8Tch_maoH9o0MzM1" class="btn">Join Free Trial Group</a>
       <a href="https://t.me/DevShivaRaj" class="btn btn-outline" style="margin-left:8px;">Contact on Telegram</a>
     </div>
+
     <div class="hero-img">
       <img src="assets/hero.jpg" alt="Market analysis chart" />
-    </div></div></div>
+    </div>
+  </div>
+</div>
 
 <div class="main">
   <div class="container">
 
+    <!-- ABOUT -->
     <div class="section-box">
       <h2>📌 About the Service</h2>
-      <p>Market Pulse provides structured, clean and professional intraday learning levels for both <strong>Nifty</strong> and <strong>BankNifty</strong> based on pure price-action behaviour.</p>
+      <p>Market Pulse provides structured, clean and professional intraday learning levels for both <strong>Nifty</strong> and <strong>BankNifty</strong> based purely on price-action behaviour.</p>
       <ul>
         <li>PDH / PDL Levels</li>
         <li>Trend Bias (Bullish / Bearish)</li>
@@ -156,49 +223,66 @@ ul li{margin-bottom:6px;}
         <li>Safe Buy / Sell Learning Areas</li>
         <li>Logical SL & Target Mapping</li>
       </ul>
-      <p>Daily levels are posted when <strong>Trend conformed</strong>.</p>
+      <p>Daily levels are posted at <strong>9:10 AM</strong> for educational tracking.</p>
     </div>
 
+    <!-- FREE TRIAL -->
     <div class="section-box">
-      <h2>🆓 Join Free Trial Group (2 Days)</h2>
-      <p>Join our free trial Telegram group and check how our Nifty & BankNifty levels perform live in the market.</p>
+      <h2>🆓 Free Trial Group (2 Days)</h2>
+      <p>Join the free trial Telegram group and observe how the Nifty & BankNifty levels behave in live market conditions before choosing any plan.</p>
       <a href="https://t.me/+8Tch_maoH9o0MzM1" class="btn">Join Free Trial Group</a>
     </div>
 
+    <!-- PREMIUM SUBSCRIPTION -->
     <div class="section-box">
-      <h2>🔥 Premium Subscription</h2>
-      <p>Learn price-action trading with our daily Nifty & BankNifty level structure.</p>
+      <h2>🔥 Premium Subscription (Educational)</h2>
+      <p>Get structured daily levels, time-based plans and zone explanations for your learning and practice.</p>
       <ul>
         <li><strong>Monthly Plan:</strong> ₹3000</li>
-        <li><strong>3 Months:</strong> ₹6000</li>
-        <li><strong>6 Months:</strong> ₹10,000</li>
+        <li><strong>3 Months Plan:</strong> ₹6000</li>
+        <li><strong>6 Months Plan:</strong> ₹10,000</li>
       </ul>
       <p>UPI Payment:</p>
       <div class="upi-box">devshivaraj-3@okicici</div>
-      <p>After payment send screenshot + name + mobile + Telegram username to <strong>9500450826</strong>.</p>
+      <p>After payment, send screenshot + name + mobile + Telegram username to <strong>9500450826</strong> on WhatsApp / Telegram.</p>
     </div>
 
+    <!-- ALGO EDUCATION PROGRAM (REPLACES ACCOUNT HANDLING) -->
     <div class="section-box">
-      <h2>💼 Account Handling (Optional)</h2>
-      <p>For those who want disciplined execution with our structured price-action approach.</p>
+      <h2>🤖 Algo Education Program (Advanced)</h2>
+      <p>This is a <strong>learning-only program</strong> for traders who want to understand how disciplined rule-based and algo-style execution works.</p>
       <ul>
-        <li>Declare capital → Pay <strong>25% monthly fee</strong> upfront.</li>
-        <li>Next month fee recalculated based on new capital.</li>
-        <li>Profit & Loss belongs fully to the client.</li>
-        <li>All trades executed through <strong>algo-assisted method</strong>.</li>
+        <li>Understanding rule-based entries / exits</li>
+        <li>How to convert a manual setup into an algorithmic structure</li>
+        <li>Basic flow of API-based trading (concept only)</li>
+        <li>How to backtest and forward-test your logic</li>
+        <li>Risk management & max loss rules in an algo framework</li>
+        <li>How to execute <strong>your own trades</strong> with discipline</li>
       </ul>
-      <p>Example:</p>
-      <ul>
-        <li>Capital ₹1,00,000 → Fee ₹25,000</li>
-        <li>Capital ₹2,00,000 (next month) → Fee ₹50,000</li>
-      </ul>
-      <div class="upi-box">devshivaraj-3@okicici</div>
-      <p>Send screenshot to <strong>9500450826</strong>.</p>
+      <p><strong>Important:</strong> We do <u>not</u> take access to your trading account, we do <u>not</u> operate your capital, and we do <u>not</u> execute trades on your behalf. You are fully responsible for your own trading decisions.</p>
+      <p>For Algo Education Program details (timings, fees, session plan), please contact on Telegram: <strong>@DevShivaRaj</strong>.</p>
     </div>
 
+    <!-- LEGAL SAFE LEARNING OPTIONS -->
+    <div class="section-box">
+      <h2>✅ Legal & Safe Learning Plans</h2>
+      <p>All services are designed to stay within the legal and regulatory framework. We only provide <strong>educational content</strong>, not portfolio management or direct trading services.</p>
+      <ul>
+        <li>🔹 Intraday Nifty & BankNifty learning levels</li>
+        <li>🔹 Educational discussion of price-action structures</li>
+        <li>🔹 Learning-based “zone mapping” & market context</li>
+        <li>🔹 Algo Education Program (concepts, logic & discipline)</li>
+        <li>🔹 No trade execution on client accounts</li>
+        <li>🔹 No guaranteed profit / no assured returns</li>
+      </ul>
+      <p style="font-size:13px;color:#6b7280;">You place your own trades in your own account at your own risk and discretion.</p>
+    </div>
+
+    <!-- STOCK PERFORMANCE -->
     <div class="section-box">
       <h2>📈 Stock & Index Performance</h2>
-      <p style="font-size:14px;color:#555;">Nifty, BankNifty & stock performance auto-loaded from <code>stock-tips.json</code>.</p>
+      <p style="font-size:14px;color:#555;">Nifty, BankNifty & stock performance are displayed for learning reference from <code>stock-tips.json</code>. This is not a live recommendation, only example tracking.</p>
+
       <div id="stock-wrapper" style="display:flex;gap:10px;align-items:center;">
         <button id="prevBtn" class="btn btn-outline" style="padding:6px 12px;">‹</button>
         <div id="stockCard" style="flex:1;background:#f9fafb;padding:18px;border-radius:12px;border:1px solid #e5e7eb;">
@@ -209,67 +293,131 @@ ul li{margin-bottom:6px;}
       <p id="stockCounter" style="font-size:13px;color:#666;margin-top:10px;"></p>
     </div>
 
+    <!-- TESTIMONIALS -->
     <div class="section-box">
       <h2>💬 Testimonials</h2>
       <div id="testiBox">
         <p id="testiText" style="font-size:15px;margin-bottom:8px;">“Levels are very clean and easy to follow.”</p>
         <p id="testiAuthor" style="font-size:13px;color:#666;">— Trader A</p>
-        <div id="testiDots" style="margin-top:10px;"></div>
       </div>
     </div>
 
-<!-- NON-REFUNDABLE NOTICE -->
-<div class="section-box" style="background:#fff2f2;border-left:4px solid #dc2626;">
-  <h2 style="color:#dc2626;font-size:18px;">🔒 Payment Policy</h2>
-  <p style="color:#7f1d1d;font-size:15px;line-height:1.6;">
-    All subscription fees and account handling charges are 
-    <strong>strictly non-refundable</strong> once paid. 
-    Please use the free trial group to evaluate the service before making any payment.
-  </p>
-</div>
+    <!-- NON-REFUNDABLE NOTICE -->
+    <div class="section-box" style="background:#fff2f2;border-left:4px solid #dc2626;">
+      <h2 style="color:#dc2626;font-size:18px;">🔒 Payment Policy</h2>
+      <p style="color:#7f1d1d;font-size:15px;line-height:1.6;">
+        All subscription payments and education program fees are <strong>strictly non-refundable</strong> once paid. 
+        Please use the free trial group and clarify all doubts before making any payment.
+      </p>
+    </div>
 
+    <!-- DISCLAIMER -->
     <div class="disclaimer">
       <strong>Important Notice:</strong><br>
-      Market Pulse is <strong>not SEBI registered</strong>. All levels are shared only for <strong>educational and learning</strong> purposes. No buy/sell recommendations or guaranteed returns. Please join the free trial group to check performance before subscribing.
+      Market Pulse is <strong>not SEBI registered</strong>. All levels, examples and sessions are shared only for <strong>educational and learning</strong> purposes. 
+      No buy/sell recommendations, no assured profits, and no capital management services are provided.
     </div>
 
   </div>
 </div>
 
+<!-- FLOATING CONTACT BUTTONS -->
 <div class="floating">
-  <a class="fab" href="https://t.me/DevShivaRaj" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"></a>
-  <a class="fab" href="https://wa.me/919500450826" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a>
+  <a class="fab" href="https://t.me/DevShivaRaj" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+  </a>
+  <a class="fab" href="https://wa.me/919500450826" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+  </a>
+</div>
+
+<!-- DISCLAIMER POPUP MODAL -->
+<div id="disclaimerModal" class="modal-backdrop" style="display:none;">
+  <div class="modal">
+    <h3>Disclaimer & Confirmation</h3>
+    <p>Market Pulse is <strong>not SEBI registered</strong>. All content, levels and examples are shared only for <strong>education and learning</strong>.</p>
+    <p>We <strong>do not</strong> manage client funds, do not execute trades on your behalf, and do not provide guaranteed returns.</p>
+    <p>By clicking “I Understand”, you confirm that you are accessing this site for educational information only and you are fully responsible for your own trading decisions.</p>
+    <button id="disclaimerBtn" class="modal-btn">I Understand</button>
+  </div>
 </div>
 
 <script>
+/* OFFER TIMER */
 const offerEnd = new Date("2025-11-30T23:59:59");
-function updateOffer(){const now=new Date();const diff=offerEnd-now;if(diff<=0)return;const d=Math.floor(diff/864e5);const h=Math.floor(diff/36e5)%24;document.querySelector('.top-flash').innerHTML=`⚡ 6-Month Plan ₹10,000 • Ends in ${d}d ${h}h ⚡`;}
-updateOffer();setInterval(updateOffer,60000);
+function updateOffer(){
+  const now = new Date();
+  const diff = offerEnd - now;
+  if (diff <= 0) return;
+  const d = Math.floor(diff / 864e5);
+  const h = Math.floor(diff / 36e5) % 24;
+  document.querySelector('.top-flash').innerHTML =
+    `⚡ 6-Month Plan ₹10,000 • Ends in ${d}d ${h}h ⚡`;
+}
+updateOffer();
+setInterval(updateOffer, 60000);
 
-let tips=[];let i=0;
-function loadTips(){fetch("stock-tips.json").then(r=>r.json()).then(d=>{tips=d;i=0;renderCard();});}
-function renderCard(){if(!tips.length){stockCard.innerHTML="No active tips";return;}const t=tips[i];const diff=t.current-t.buy;const color=diff>=0?"#16a34a":"#dc2626";document.getElementById('stockCard').innerHTML=`<div style='font-size:18px;font-weight:600;'>${t.name}</div>
-<div>Buy: <strong>${t.buy}</strong></div>
-<div>Current: <strong>${t.current}</strong></div>
-<div style='margin-top:8px;font-weight:700;color:${color};'>Points: ${diff>=0?"+":""}${diff}</div>`;
-stockCounter.innerHTML=`${i+1} of ${tips.length}`;}
-prevBtn.onclick=()=>{i=(i-1+tips.length)%tips.length;renderCard();};
-nextBtn.onclick=()=>{i=(i+1)%tips.length;renderCard();};
+/* TESTIMONIAL AUTO-SLIDE */
+const testi = [
+ {t:"Levels are clean & simple to follow.",a:"— Ravi"},
+ {t:"Time cycle structure improved my discipline.",a:"— Karthik"},
+ {t:"Rejection zones reduced my emotional entries.",a:"— Anand"},
+ {t:"Very structured and professional approach.",a:"— Manoj"},
+];
+let ti = 0;
+setInterval(() => {
+  document.getElementById("testiText").innerHTML = `“${testi[ti].t}”`;
+  document.getElementById("testiAuthor").innerHTML = testi[ti].a;
+  ti = (ti + 1) % testi.length;
+}, 5000);
+
+/* STOCK TIPS SIMPLE SLIDER (from stock-tips.json) */
+let tips = [];
+let i = 0;
+function loadTips(){
+  fetch("stock-tips.json?nocache="+Math.random())
+    .then(r => r.json())
+    .then(d => { tips = d; i = 0; renderCard(); });
+}
+function renderCard(){
+  if (!tips.length){
+    stockCard.innerHTML = "No active tips";
+    stockCounter.innerHTML = "";
+    return;
+  }
+  const t = tips[i];
+  const diff = t.current - t.buy;
+  const color = diff >= 0 ? "#16a34a" : "#dc2626";
+  document.getElementById('stockCard').innerHTML =
+    `<div style='font-size:18px;font-weight:600;'>${t.name}</div>
+     <div>Buy: <strong>${t.buy}</strong></div>
+     <div>Current: <strong>${t.current}</strong></div>
+     <div style='margin-top:8px;font-weight:700;color:${color};'>
+       Points: ${diff>=0?"+":""}${diff}
+     </div>`;
+  stockCounter.innerHTML = `${i+1} of ${tips.length}`;
+}
+prevBtn.onclick = () => { i = (i - 1 + tips.length) % tips.length; renderCard(); };
+nextBtn.onclick = () => { i = (i + 1) % tips.length; renderCard(); };
 loadTips();
 
-const testi=[
- {t:"Levels are clean & simple to follow.",a:"— Ravi"},
- {t:"Time cycle improved my discipline.",a:"— Karthik"},
- {t:"Rejection zones reduced my losses.",a:"— Anand"},
- {t:"Very structured & professional updates.",a:"— Manoj"},
- {t:"Clear communication & consistent logic.",a:"— Suresh"},
- {t:"Daily levels help me prepare better.",a:"— Prakash"}
-];
-let ti=0;
-function showTesti(){testiText.innerHTML=`“${testi[ti].t}”`;testiAuthor.innerHTML=testi[ti].a;ti=(ti+1)%testi.length;}
-showTesti();setInterval(showTesti,5000);
+/* DISCLAIMER POPUP LOGIC */
+const modal = document.getElementById("disclaimerModal");
+const modalBtn = document.getElementById("disclaimerBtn");
+
+function showDisclaimerIfNeeded(){
+  const accepted = localStorage.getItem("mp_disclaimer_ok");
+  if (!accepted){
+    modal.style.display = "flex";
+  }
+}
+modalBtn.onclick = () => {
+  localStorage.setItem("mp_disclaimer_ok","yes");
+  modal.style.display = "none";
+};
+
+showDisclaimerIfNeeded();
 </script>
 
 </body>
 </html>
-
