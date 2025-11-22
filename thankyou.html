@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Thank You – Market Pulse</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --blue:#1a73e8; --navy:#0f3b66; --muted:#6b7280;
+    --bg:linear-gradient(180deg,#f6f9ff,#f2f4f7);
+  }
+  *{box-sizing:border-box;font-family:Inter,Roboto,Arial,sans-serif}
+  body{margin:0;background:var(--bg);text-align:center;padding:0;}
+
+  /* main box */
+  .box{
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(6px);
+    width:90%;max-width:600px;margin:90px auto 20px;
+    padding:28px;border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    animation:fadeIn .7s ease;
+  }
+  @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  h1{color:var(--navy);font-size:24px;margin-bottom:8px;font-weight:700}
+  p{color:var(--muted);font-size:15px;line-height:1.5}
+
+  /* smart buttons */
+  .btn{
+    display:block;width:270px;margin:14px auto;padding:14px;
+    background:var(--blue);color:white;text-decoration:none;
+    border-radius:12px;font-size:18px;font-weight:600;
+    box-shadow:0 4px 14px rgba(26,115,232,0.3);
+    transition:0.25s;
+  }
+  .btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(26,115,232,0.45)}
+  .hidden{display:none}
+
+  /* header icon */
+  .icon{
+    width:70px;height:70px;border-radius:18px;
+    background:linear-gradient(135deg,#1a73e8,#43a3ff);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 14px;color:white;font-size:32px;font-weight:700;
+    box-shadow:0 6px 20px rgba(26,115,232,0.35);
+  }
+
+  /* floating buttons */
+  .floating{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:12px;z-index:9999}
+  .fab{
+    width:60px;height:60px;border-radius:50%;background:white;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.18);
+    transition:0.25s;
+  }
+  .fab:hover{transform:translateY(-4px);box-shadow:0 8px 26px rgba(0,0,0,0.28)}
+  .fab img{width:32px;height:32px}
+
+  /* footer */
+  footer{margin-top:20px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+  <div class="icon">MP</div>
+  <h1>Registration Successful 🎉</h1>
+  <p>You will now be redirected to the correct group depending on the service you selected.</p>
+
+  <!-- TRIAL BUTTON -->
+  <a id="trialBtn" class="btn hidden" href="YOUR-TRIAL-TELEGRAM-LINK" target="_blank">Join Trial Group</a>
+
+  <!-- PREMIUM BUTTON FOR PAID PLANS -->
+  <a id="premiumBtn" class="btn hidden" href="YOUR-PREMIUM-TELEGRAM-LINK" target="_blank">Join Premium Group (Paid)</a>
+
+  <!-- ACCOUNT HANDLING BUTTON -->
+  <a id="accountBtn" class="btn hidden" href="YOUR-PREMIUM-TELEGRAM-LINK" target="_blank">Join Premium Group (Account Handling)</a>
+
+  <footer>If buttons don’t work, contact: @yourusername</footer>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating">
+  <a class="fab" href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"></a>
+  <a class="fab" href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a>
+  <a class="fab" href="tel:YOUR_PHONE_NUMBER"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png"></a>
+</div>
+
+<!-- SMART AUTO-DETECT -->
+<script>
+const params = new URLSearchParams(window.location.search);
+const service = params.get("service");
+
+const trialBtn = document.getElementById("trialBtn");
+const premiumBtn = document.getElementById("premiumBtn");
+const accountBtn = document.getElementById("accountBtn");
+
+// Hide all first
+trialBtn.classList.add("hidden");
+premiumBtn.classList.add("hidden");
+accountBtn.classList.add("hidden");
+
+// Detect service
+if(service === "trial"){
+    trialBtn.classList.remove("hidden");
+}
+else if(service === "monthly" || service === "6month"){
+    premiumBtn.classList.remove("hidden");
+}
+else if(service === "account"){
+    accountBtn.classList.remove("hidden");
+}
+else{
+    premiumBtn.classList.remove("hidden"); // default fallback
+}
+</script>
+
+</body>
+</html>
